@@ -7,15 +7,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home.jsx'
 import APropos from './pages/APropos/APropos.jsx'
-import Header from './components/Header/Header.jsx';
- 
+import FicheLogement from './pages/FicheLogement/FicheLogement.jsx'
+import Error from './pages/Error/Error.jsx'
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/APropos" element={<APropos />} />
+        <Route path="/FicheLogement" element={<FicheLogement />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>,
