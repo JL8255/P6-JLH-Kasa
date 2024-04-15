@@ -1,13 +1,13 @@
 import './App.css';
+import Home from "./pages/Home/Home.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>BONJOUR</h1>
-      </header>
-    </div>
-  );
+  <div>
+    <Home />
+    <p>Apps.js s'est lancé</p>
+  </div>
+  )
 }
 
 export default App;
