@@ -4,7 +4,7 @@ import styles from '../style/Footer.module.scss';
 function Footer() {
     return (
         <div className={styles.footer}>
-            <img src={LOGO_white} alt="logo" height="30px"/>
+            <img src={LOGO_white} alt="logo" height="40px"/>
             <p>(c) 2020 Kasa. All rights reserved</p>
         </div>
     )

@@ -1,13 +1,16 @@
 .header {
+    height: 68px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px 0px 40px 0px;
+    margin: 0px 0px 50px 0px;
         nav {
-            width: 150px;
+            width: 309px;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
+            font-weight: 500;
+            font-size: 24px;
         }
 }
 
