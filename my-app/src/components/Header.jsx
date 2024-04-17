@@ -5,7 +5,7 @@ import styles from '../style/Header.module.scss';
 function Header() {
     return (
     <div className={styles.header}>
-        <img src={LOGO_red} alt="logo" height="40px" />
+        <img src={LOGO_red} alt="logo" />
         <p></p>
         <nav>   
             <Link className={styles.link} to="/">Accueil</Link>

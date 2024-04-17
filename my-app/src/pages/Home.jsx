@@ -1,11 +1,11 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+import BannerPicture from "../components/BannerPicture"
+import Locations from "../components/Locations"
 
 function Home() {
     return (
     <div>
-        <p>Home s'est lancé</p>
-        
+        <BannerPicture />
+        <Locations />
     </div>
     )
 }
