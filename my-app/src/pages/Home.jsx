@@ -1,10 +1,9 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+import BannerPicture from "../components/BannerPicture"
 
 function Home() {
     return (
     <div>
-        <p>Home s'est lancé</p>
+        <BannerPicture />
         
     </div>
     )
