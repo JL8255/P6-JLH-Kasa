@@ -4,7 +4,7 @@ import locationsList from '../datas/back-end.json'
 function Locations() {
 	return (
 		<div className={styles.contentLoc}>
-            {locationsList.map((location) => (
+            {locationsList.slice(0, 6).map((location) => (
                 <a key={location.id}>
                     <div></div>
                     <img src={location.cover} width="340px"></img>

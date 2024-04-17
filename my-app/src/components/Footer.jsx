@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div className={styles.footer}>
             <img src={LOGO_white} alt="logo" height="40px"/>
-            <p>(c) 2020 Kasa. All rights reserved</p>
+            <p>© 2020 Kasa. All rights reserved</p>
         </div>
     )
 }
