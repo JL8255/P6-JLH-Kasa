@@ -1,10 +1,12 @@
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 function FicheLogement() {
     return (
         <div>
-            <Header />
+            
             <p>Fiche Logement s'est lancé</p>
+            
         </div>
     )
 }
