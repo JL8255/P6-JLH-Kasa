@@ -8,8 +8,8 @@ function Header() {
         <img src={LOGO_red} alt="logo" height="40px" />
         <p></p>
         <nav>   
-            <Link to="/">Accueil</Link>
-            <Link to="/APropos">A Propos</Link>
+            <Link className={styles.link} to="/">Accueil</Link>
+            <Link className={styles.link} to="/APropos">A Propos</Link>
         </nav>
     </div>
     )
