@@ -1,9 +1,10 @@
 import LOGO_white from '../assets/LOGO_white.svg';
+import styles from '../style/Footer.module.scss';
 
 function Footer() {
     return (
-        <div className="Footer">
-            <img src={LOGO_white} alt="logo" />
+        <div className={styles.footer}>
+            <img src={LOGO_white} alt="logo" height="30px"/>
             <p>(c) 2020 Kasa. All rights reserved</p>
         </div>
     )
