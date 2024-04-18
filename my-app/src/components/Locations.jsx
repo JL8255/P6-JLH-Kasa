@@ -7,7 +7,7 @@ function Locations() {
             {locationsList.slice(0, 6).map((location) => (
                 <a key={location.id}>
                     <div></div>
-                    <img src={location.cover} width="340px"></img>
+                    <img src={location.cover}></img>
                     <p>{location.title}</p>
                     
                 </a>
