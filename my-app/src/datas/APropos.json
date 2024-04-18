@@ -1,0 +1,36 @@
+[
+    {
+        "id":"t1",
+        "theme":"Fiabilité",
+        "contenu": [
+            "Vérification des offres par nos experts.",
+            "Avis vérifiés."
+        ]
+    },
+    {
+        "id":"t2",
+        "theme":"Respect",
+        "contenu": [
+            "Le client est roi !",
+            "notre code de déontologie",
+            "formation de nos partenaires aux règles de Kasa"
+        ]
+    },
+    {
+        "id":"t3",
+        "theme":"Service",
+        "contenu": [
+            "Numéro d'appel 24h/24h et 7j/7j.",
+            "Dépannage",
+            "Médiation"
+        ]
+    },
+    {
+        "id":"t4",
+        "theme":"Sécurité",
+        "contenu": [
+            "Vérifications d'application des normes",
+            "Paiement sécurisé via notre agence"
+        ]
+    }
+]
