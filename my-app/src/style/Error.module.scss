@@ -1,0 +1,23 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.num {
+    color:rgba(255, 96, 96, 1);
+    font-weight: 700;
+    font-size: 288px;
+    margin: 0px 0px 100px 0px;
+}
+.message {
+    color:rgba(255, 96, 96, 1);
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0px 0px 150px 0px;
+}
+.link {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+}
