@@ -1,12 +1,12 @@
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import BannerPictureAP from "../components/BannerPictureAP"
+import Theme from "../components/ThemesAP"
+
 
 function APropos() {
     return (
         <div>
-            
-            <p>A Propos s'est lancé</p>
-            
+            <BannerPictureAP /> 
+            <Theme />
         </div>
     )
 }
