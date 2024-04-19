@@ -2,6 +2,7 @@ import styles from '../style/Slideshow.module.scss';
 import locationsList from '../datas/back-end.json'
 import Vector from '../assets/Vector.svg';
 import React, { useState } from 'react';
+import FicheLogement from '../pages/FicheLogement';
 
 let A = 0
 let B = 6
@@ -17,7 +18,7 @@ function Slideshow() {
             </button>
             <div className={styles.contentCards}>
                 {locationsList.slice(A+count, B+count).map((location, index) => (
-                    <a key={location.id} href="/FicheLogement">
+                    <a key={location.id} onClick={() => FicheLogement(location)}>
                         <div></div>
                         <img src={location.cover}></img>
                         <p>{index+1+count+" - "+location.title}</p>
