@@ -1,11 +1,11 @@
 import BannerPicture from "../components/BannerPicture"
-import Locations from "../components/Locations"
+import Slideshow from "../components/Slideshow"
 
 function Home() {
     return (
     <div>
         <BannerPicture />
-        <Locations />
+        <Slideshow />
     </div>
     )
 }
