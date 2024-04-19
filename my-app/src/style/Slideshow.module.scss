@@ -1,5 +1,10 @@
 .contentLoc {
-    max-height: calc(100vh - 710px);
+    display: flex;
+    flex-direction: row;
+}
+
+.contentCards {
+    width: 100vw;
     background-color: #F6F6F6;
     border-radius: 20px 20px 20px 20px;
     display: flex;
@@ -41,5 +46,34 @@
             z-index: 3;
         }
         
+    }
+}
+
+.buttonP {
+    width: 80px;
+    height: 440px;
+    border:none;
+    position:absolute;
+    left:0px;
+    background-color: white;
+    margin: 0;
+    &:hover {
+        background-color: red;
+        transition: 0.5s;
+    }
+
+}
+
+.buttonS {
+    width: 80px;
+    height: 440px;
+    border:none;
+    position:absolute;
+    right:0px;
+    background-color: white;
+    margin: 0;
+    &:hover {
+        background-color: red;
+        transition: 0.5s;
     }
 }
