@@ -1,10 +1,9 @@
+import styles from '../style/Tag.module.scss'
 
-
-
-function Tag({location}) {
+function Tag({tag}) {
     return (
-        <div>
-            <p>{location.tags}</p>
+        <div className={styles.contentTag}>
+            <p>{tag}</p>
         </div>
     )
 }

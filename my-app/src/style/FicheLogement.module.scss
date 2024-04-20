@@ -6,10 +6,11 @@
     margin: 0px 0px 30px 0px;
 }
 
-.capsule {
+.capsuleTitre {
     width: 1240px;
     display: flex;
     flex-direction: row;
+    margin: 0px 0px 20px 0px;
     .contentTitle {
         width: 67%;
         .title {
@@ -48,5 +49,16 @@
                 margin: 3px 0px 3px 0px;
             }
         }
+    }
+}
+
+.capsuleTag {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .tag {
+        display: flex;
+        flex-direction: row;
     }
 }
