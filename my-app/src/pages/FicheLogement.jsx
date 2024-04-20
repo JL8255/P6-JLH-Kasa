@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom"
 
-const id = useParams
-
-console.log(id)
 
 function FicheLogement(location) {
+    const { id } = useParams()
+    console.log(id)
     return (
         <div>
             <p>{location.title}</p>        
