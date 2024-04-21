@@ -3,15 +3,18 @@ import locationsList from '../datas/back-end.json'
 import styles from '../style/FicheLogement.module.scss'
 import Tag from "../components/Tag"
 import Notation from "../components/Notation"
+import Collapse from "../components/Collapse"
 
 function FicheLogement() {
 
     let { id } = useParams()
     id = id.substring(1)
-
     const [ location ] = locationsList.filter(function (loc) {
         return loc.id === id;
     });
+
+    if (location == undefined) {document.location.replace('/Error_id_not_found!')
+    } else {
 
     const whereSpace = location.host.name.search(" ")
     const prenom = location.host.name.substring(0,whereSpace)
@@ -19,8 +22,6 @@ function FicheLogement() {
 
     const tags = location.tags
 
-    if (location == undefined) {document.location.replace('/Error_id_not_found!')
-    } else {
     return (
         <div>
             <img className={styles.img} src={location.cover} alt="photo de la location"/>
@@ -46,6 +47,11 @@ function FicheLogement() {
                 <div>
                     <Notation rat={location.rating}/>
                 </div>
+            </div>
+
+            <div className={styles.contentCol}>
+                <Collapse className={styles.collapse} />
+                <Collapse className={styles.collapse} />
             </div>
         </div>
     )}
