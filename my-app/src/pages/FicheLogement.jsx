@@ -50,8 +50,12 @@ function FicheLogement() {
             </div>
 
             <div className={styles.contentCol}>
-                <Collapse className={styles.collapse} />
-                <Collapse className={styles.collapse} />
+                <div className={styles.collapse}>
+                    <Collapse name="Description" content={[location.description]}/>
+                </div>
+                <div className={styles.collapse}>
+                    <Collapse name="Equipement" content={location.equipments}/>
+                </div>
             </div>
         </div>
     )}

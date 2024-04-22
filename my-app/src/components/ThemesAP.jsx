@@ -1,15 +1,14 @@
 import styles from '../style/ThemeAP.module.scss';
 import themeList from '../datas/APropos.json'
-import Vector from '../assets/Vector.svg';
+import Collapse from './Collapse';
 
 function Theme() {
 	return (
 		<div className={styles.contentTheme}>
             {themeList.map((theme) => (
-                <a className={styles.Theme} key={theme.id}>
-                    <p>{theme.theme}</p>
-                    <img src={Vector} alt="développer" />
-                </a>
+                <div className={styles.contentCollapse} key={theme.id}>
+                    <Collapse name={theme.theme} content={theme.contenu} />
+                </div>
             ))}
 		</div>
 	)
