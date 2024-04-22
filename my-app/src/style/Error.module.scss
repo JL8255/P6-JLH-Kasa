@@ -7,19 +7,19 @@
     align-items: center; 
 }
 .num {
-    color:rgba(255, 96, 96, 1);
+    color:$colortheme;
     font-weight: 700;
     font-size: 288px;
     margin: 0px 0px 100px 0px;
 }
 .message {
-    color:rgba(255, 96, 96, 1);
+    color:$colortheme;
     font-weight: 500;
     font-size: 36px;
     margin: 0px 0px 150px 0px;
 }
 .link {
-    color: black;
+    color: $fontColorDefault;
     font-weight: 500;
     font-size: 18px;
 }

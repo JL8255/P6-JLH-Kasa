@@ -4,7 +4,7 @@
     width: 100%;
     height: 415px;
     object-fit: cover;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: $bigBorderRadius;
     margin: 0px 0px 30px 0px;
 }
 
@@ -18,10 +18,11 @@
         .title {
             font-weight: 500;
             font-size: 36px;
-            color: red;
+            color: $colortheme;
             margin:0px 0px 10px 0px;
         }
         .location {
+            color: $fontColorDefault;
             font-weight: 500;
             font-size: 18px;
             margin:0;
@@ -47,7 +48,7 @@
             h3 {
                 font-weight: 500;
                 font-size: 18px;
-                color: red;
+                color: $colortheme;
                 margin: 3px 0px 3px 0px;
             }
         }

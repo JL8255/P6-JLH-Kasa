@@ -20,7 +20,7 @@
 
 .link {
     text-decoration: none;
-    color: black;
+    color: $fontColorDefault;
     &:hover {
         text-decoration: underline;
     }
