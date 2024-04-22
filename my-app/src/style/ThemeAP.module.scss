@@ -1,8 +1,12 @@
 .contentTheme {
-    width: 1240px;
+    width: 1040px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.contentCollapse {
+    width: 100%;
+    margin: 0px 0px 40px 0px;
 }
 .Theme {
     width: 1023px;
