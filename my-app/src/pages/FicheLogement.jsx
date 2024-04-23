@@ -4,6 +4,7 @@ import styles from '../style/FicheLogement.module.scss'
 import Tag from "../components/Tag"
 import Notation from "../components/Notation"
 import Collapse from "../components/Collapse"
+import Carrousel from "../components/Carrousel"
 
 function FicheLogement() {
 
@@ -24,7 +25,7 @@ function FicheLogement() {
 
     return (
         <div>
-            <img className={styles.img} src={location.cover} alt="photo de la location"/>
+            <Carrousel pictures={location.pictures}/>
             
             <div className={styles.capsuleTitre}>
                 <div className={styles.contentTitle}>
