@@ -17,26 +17,26 @@
         position: absolute;
         z-index: 0;
     }
-    .imgP {
+
+    .img_ {
         display: block;
         cursor: pointer;
         height: 60px;
-        transform : rotate(270deg);
         position:absolute;
-        left : 0px;
         z-index: 1;
+    }
+    .imgP {
+        @extend.img_;
+        transform : rotate(270deg);
+        left : 0px;
     }
     .imPnone {
         display: none;
     }
     .imgS {
-        display: block;
-        cursor: pointer;
-        height: 60px;
+        @extend.img_;
         transform : rotate(90deg);
-        position: absolute;
         right: 0px;
-        z-index: 2;
     }
     .imgSnone {
         display: none;
