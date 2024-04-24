@@ -18,10 +18,11 @@
         }
 }
 
-.link {
+.linkA {
+    text-decoration:underline;
+    color: $fontColorDefault;
+}
+.linkB {
     text-decoration: none;
     color: $fontColorDefault;
-    &:hover {
-        text-decoration: underline;
-    }
 }

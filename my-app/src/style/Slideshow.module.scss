@@ -9,16 +9,16 @@
 
 .contentCards {
     width: 100vw;
-    height: 817px;
+    height: 830px;
     background-color: $carrouselBC;
     border-radius: 20px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content:start;
+    align-items:start;
     position:relative;
-    padding: 23px;
+    padding: 25px 27.5px 25px 27.5px;
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@
     width: 100px;
     height: 100%;
     border:none;
-    margin: 0;
+    margin: -25px 0px -25px 0px;
     position: absolute;
     left: 0px;
     z-index: 1;
@@ -57,7 +57,7 @@
     width: 100px;
     height: 100%;
     border:none;
-    margin: 0;
+    margin: -25px 0px -25px 0px;
     position: absolute;
     right: 0px;
     z-index: 1;
