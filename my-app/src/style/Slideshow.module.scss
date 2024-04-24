@@ -3,6 +3,8 @@
 .contentLoc {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .contentCards {
@@ -13,35 +15,59 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position:relative;
+    padding: 23px;
+    box-sizing: border-box;
+}
+
+.imgP {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.buttonP {
-    width: 80px;
-    height: 440px;
+    opacity: 0;
+    border-radius: 10px 0px 0px 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
     border:none;
-    position:absolute;
-    left:0px;
-    background-color: $colortheme;
     margin: 0;
+    position: absolute;
+    left: 0px;
+    z-index: 1;
     &:hover {
-        background-color: $colortheme;
+        opacity: 1;
         transition: 0.5s;
     }
-
+    img {
+        rotate: (270deg);
+        width: 100%;
+        filter: drop-shadow(0px 0px 15px gray);
+    }
 }
 
-.buttonS {
-    width: 80px;
-    height: 440px;
+.imgS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
     border:none;
-    position:absolute;
-    right:0px;
-    background-color: $colortheme;
     margin: 0;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
     &:hover {
-        background-color: $colortheme;
+        opacity: 1;
         transition: 0.5s;
+    }
+    img {
+        rotate: (90deg);
+        width: 100%;
+        filter: drop-shadow(0px 0px 15px gray);
     }
 }
