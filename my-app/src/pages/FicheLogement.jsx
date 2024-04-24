@@ -5,7 +5,7 @@ import Tag from "../components/Tag"
 import Notation from "../components/Notation"
 import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
-
+import Header from '../components/Header'
 
 function FicheLogement() {
 
@@ -26,6 +26,7 @@ function FicheLogement() {
 
     return (
         <div>
+            <Header AActif={false} BActif={false}/>
             <Carrousel pictures={loc.pictures}/>
             
             <div className={styles.capsuleTitre}>
