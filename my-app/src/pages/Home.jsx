@@ -6,7 +6,7 @@ import IMG2 from '../assets/paysage_bord_de_mer.jpg';
 function Home() {
     return (
     <div>
-        <BannerPicture img={IMG2} opacity={0.45}/>
+        <BannerPicture img={IMG2} opacity={0.45} text={"Chez vous, partout et ailleurs"}/>
         <Slideshow />
     </div>
     )
