@@ -8,14 +8,15 @@
 }
 
 .contentCards {
-    width: 100vw;
-    height: 830px;
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
+    min-height: 830px;
     background-color: $carrouselBC;
     border-radius: 20px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:start;
+    justify-content:center;
     align-items:start;
     position:relative;
     padding: 25px 27.5px 25px 27.5px;
@@ -57,5 +58,22 @@
     right: 0px;
     img {
         rotate: (90deg);
+    }
+}
+
+@media (max-width: $switchMobileWidth) {
+    .contentCards {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 440px);
+        padding:0;
+        border-radius: 10px 10px 10px 10px;
+        background-color: $bodyBC;
+        overflow-y: scroll;
+    }
+    .imgP {
+        display: none;
+    }
+    .imgS {
+        display: none;
     }
 }

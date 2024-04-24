@@ -1,7 +1,8 @@
 @import "./Variables_Globales/VG.module.scss";
 
 .capsuleTitre {
-    width: 1240px;
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
     display: flex;
     flex-direction: row;
     margin: 0px 0px 20px 0px;
@@ -66,5 +67,23 @@
 }
 
 .collapse {
-    width: 585px;
+    width: 46.5%;
+}
+
+@media (max-width: $switchMobileWidth) {
+    .capsuleTitre {
+        width: calc(100vw - 40px);
+    }
+    .capsuleTag {
+        width: calc(100vw - 40px);
+    }
+    .contentCol {
+        width: calc(100vw - 40px);
+        display: flex;
+        flex-direction:column;
+    }
+    .collapse {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

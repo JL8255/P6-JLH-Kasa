@@ -50,3 +50,20 @@
     margin:0;
     transition: $transitionTime;
 }
+
+@media (max-width: $switchMobileWidth) {
+    .nameCollapse {
+        height: 30px;
+        padding: 0px 20px 0px 15px;
+        border-radius: 5px;
+        p {
+            font-size: 13px;
+        }
+        .passive_img {
+            width: 20px;
+        }
+        .active_img {
+            width: 20px;
+        }
+    }
+}

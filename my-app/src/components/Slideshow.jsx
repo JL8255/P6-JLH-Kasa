@@ -4,9 +4,10 @@ import Vector from '../assets/Vector.svg';
 import React, { useState } from 'react';
 import Card from '../components/Card';
 
-let A = 0
-let B = 6
 let maxLength = locationsList.length
+let each = ((screen.width) < 766 ? maxLength : 6 )
+let A = 0
+let B = each
 
 function Slideshow() {
     let [count, setCount] = useState(0);

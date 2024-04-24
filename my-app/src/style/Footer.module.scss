@@ -1,7 +1,8 @@
 @import "./Variables_Globales/VG.module.scss";
 
 .footer {
-    width: 100%;
+    width: 100vw;
+    max-width: $maxLview;
     height: 209px;
     background-color: $footerBC;
     color: $bodyBC;
@@ -18,5 +19,20 @@
         font-weight: 500;
         font-size: 24px;
         margin: 40px 0px 0px 0px;
+    }
+}
+
+@media (max-width: $switchMobileWidth) {
+    .footer {
+        img {
+            height: 40px;
+        }
+        p {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            width: 134px;
+            margin: 10px 0px 0px 0px;
+        }
     }
 }

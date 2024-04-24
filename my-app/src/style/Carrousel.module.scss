@@ -1,7 +1,8 @@
 @import './Variables_Globales/VG.module.scss';
 
 .contentImg {
-    width: 1240px;
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
     height: 415px;
     display: flex;
     flex-direction: row;
@@ -10,7 +11,8 @@
     margin: 0px 0px 30px 0px;
     position: relative;
     .img {
-        width: 1240px;
+        width: calc(100vw - 200px);
+        max-width: calc($maxLview - 200px);    
         height: 415px;
         object-fit: cover;
         border-radius: $bigBorderRadius;
@@ -52,5 +54,21 @@
     }
     .nbnone {
         display: none;
+    }
+}
+
+@media (max-width: $switchMobileWidth) {
+    .contentImg {
+        width: calc(100vw - 40px);
+        margin: 0px 0px 20px 0px;
+        height: 255px;
+        .img {
+            width: calc(100vw - 40px);
+            height: 255px;
+            border-radius: $slimBorderRadius;
+        }
+        .img_ {
+            width: 24px;
+        }
     }
 }

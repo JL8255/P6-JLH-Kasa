@@ -37,3 +37,16 @@
         z-index: 3;
     }  
 }
+
+@media (max-width: $switchMobileWidth) {
+    .link {
+        margin: 0px 0px 22px 0px;
+        height: 255px;
+        div {
+            height: 255px;
+        }
+        img {
+            height: 255px;
+        }
+    }
+}
