@@ -33,23 +33,24 @@ function FicheLogement() {
                 <div className={styles.contentTitle}>
                     <h2 className={styles.title}>{loc.title}</h2>
                     <p className={styles.location}>{loc.location}</p>
+                    <div className={styles.capsuleTag}>
+                        <div className={styles.tag}>
+                            {tags.map((tag, index) => <Tag key={index} tag={tag}/>)}
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.contentHost}>
-                    <div className={styles.contentNom}>
-                        <h3>{prenom}</h3>
-                        <h3>{nom}</h3>
+                    <div className={styles.contentAvatar}>
+                        <div className={styles.contentNom}>
+                            <h3>{prenom}</h3>
+                            <h3>{nom}</h3>
+                        </div>
+                        <img src={loc.host.picture} alt="avatar du propriétaire"/>
                     </div>
-                    <img src={loc.host.picture} alt="avatar du propriétaire"/>
+                    <div className={styles.contentNotation}>
+                        <Notation rat={loc.rating}/>
+                    </div>
                 </div> 
-            </div>
-
-            <div className={styles.capsuleTag}>
-                <div className={styles.tag}>
-                    {tags.map((tag, index) => <Tag key={index} tag={tag}/>)}
-                </div>
-                <div>
-                    <Notation rat={loc.rating}/>
-                </div>
             </div>
 
             <div className={styles.contentCol}>
