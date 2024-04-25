@@ -1,38 +1,39 @@
 @import "./Variables_Globales/VG.module.scss";
 
-.img {
-    width: 100%;
-    height: 415px;
-    object-fit: cover;
-    border-radius: 20px 20px 20px 20px;
-    margin: 0px 0px 30px 0px;
-}
-
 .capsuleTitre {
-    width: 1240px;
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
     display: flex;
     flex-direction: row;
-    margin: 0px 0px 20px 0px;
+    justify-content: space-between;
+    margin: 0px 0px 0px 0px;
     .contentTitle {
-        width: 67%;
+        width: 80%;
         .title {
             font-weight: 500;
             font-size: 36px;
-            color: red;
+            color: $colortheme;
             margin:0px 0px 10px 0px;
         }
         .location {
+            color: $fontColorDefault;
             font-weight: 500;
             font-size: 18px;
-            margin:0;
+            margin:0px 0px 20px 0px;
         }
     }
     .contentHost {
         display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .contentAvatar {
+        display: flex;
         flex-direction: row;
         justify-content: end;
         align-items: center;
-        width: 33%;
+        width: 20%;
+        margin-bottom: 20px;
         img {
             width: 64px;
             height: 64px;
@@ -47,7 +48,7 @@
             h3 {
                 font-weight: 500;
                 font-size: 18px;
-                color: red;
+                color: $colortheme;
                 margin: 3px 0px 3px 0px;
             }
         }
@@ -57,12 +58,13 @@
 .capsuleTag {
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 0px 20px 0px;
     .tag {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
@@ -73,5 +75,62 @@
 }
 
 .collapse {
-    width: 585px;
+    width: 46.5%;
+}
+
+@media (max-width: $switchMobileWidth) {
+    .capsuleTitre {
+        width: calc(100vw - 40px);
+        flex-direction: column;
+        .contentTitle {
+            width: 100%;
+            .title {
+                font-size: 18px;
+            }
+            .location {
+                font-size: 14px;
+            }
+        }
+        .contentHost {
+            flex-direction: row-reverse;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            .contentAvatar {
+                width: 34%;
+                margin: 0;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 16px;
+                }
+                .contentNom {
+                    h3 {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .contentNotation {
+                display: flex;
+                justify-content: start;
+                width: 66%;
+                img {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+    }
+    .capsuleTag {
+        width: calc(100vw - 40px);
+    }
+    .contentCol {
+        width: calc(100vw - 40px);
+        display: flex;
+        flex-direction:column;
+    }
+    .collapse {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

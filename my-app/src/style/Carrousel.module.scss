@@ -1,0 +1,74 @@
+@import './Variables_Globales/VG.module.scss';
+
+.contentImg {
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
+    height: 415px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 30px 0px;
+    position: relative;
+    .img {
+        width: calc(100vw - 200px);
+        max-width: calc($maxLview - 200px);    
+        height: 415px;
+        object-fit: cover;
+        border-radius: $bigBorderRadius;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .img_ {
+        display: block;
+        cursor: pointer;
+        height: 60px;
+        position:absolute;
+        z-index: 1;
+    }
+    .imgP {
+        @extend.img_;
+        transform : rotate(270deg);
+        left : 0px;
+    }
+    .imPnone {
+        display: none;
+    }
+    .imgS {
+        @extend.img_;
+        transform : rotate(90deg);
+        right: 0px;
+    }
+    .imgSnone {
+        display: none;
+    }
+    .nb {
+        display: block;
+        color: $bodyBC;
+        font-weight: 500;
+        font-size: 18px;
+        position: absolute;
+        bottom: 10px;
+        z-index: 3;
+    }
+    .nbnone {
+        display: none;
+    }
+}
+
+@media (max-width: $switchMobileWidth) {
+    .contentImg {
+        width: calc(100vw - 40px);
+        margin: 0px 0px 20px 0px;
+        height: 255px;
+        .img {
+            width: calc(100vw - 40px);
+            height: 255px;
+            border-radius: $slimBorderRadius;
+        }
+        .img_ {
+            width: 24px;
+        }
+    }
+}

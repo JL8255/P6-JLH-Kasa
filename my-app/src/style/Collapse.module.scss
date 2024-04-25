@@ -7,12 +7,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px 10px 10px 10px;
-    background-color: rgba(255, 96, 96, 1);
+    border-radius: $slimBorderRadius;
+    background-color: $colortheme;
     margin: 0px 0px 0px 0px;
     padding: 10px 20px 10px 15px;
     p {
-        color: white;
+        color: $bodyBC;
         font-weight: 700;
         font-size: 24px;
         margin:0;
@@ -20,33 +20,52 @@
     .passive_img {
         transform: rotate(0deg);
         width: 25px;
-        transition : 0.2s
     }
     .active_img {
         transform: rotate(180deg);
         width: 25px;
-        transition : 0.2s
+        transition : $transitionTime;
     }
 }
 
 .passive_contentCollapse {
     height: 0;
-    background-color: #F6F6F6;
+    background-color: $carrouselBC;
     padding: 0px;
     font-weight: 400;
     font-size: 0px;
     line-height: 0px;
     margin:0;
-    transition: 0.2s;
+    transition: $transitionTime;
 }
 
 .active_contentCollapse {
     height: 100%;
-    background-color: #F6F6F6;
+    background-color: $carrouselBC;
     padding: 20px;
     font-weight: 400;
     font-size: 18px;
     line-height: 25.67px;
     margin:0;
-    transition: 0.2s;
+    transition: $transitionTime;
+}
+
+@media (max-width: $switchMobileWidth) {
+    .nameCollapse {
+        height: 30px;
+        padding: 0px 20px 0px 15px;
+        border-radius: 5px;
+        p {
+            font-size: 13px;
+        }
+        .passive_img {
+            width: 20px;
+        }
+        .active_img {
+            width: 20px;
+        }
+    }
+    .active_contentCollapse {
+        font-size: 14px;
+    }
 }

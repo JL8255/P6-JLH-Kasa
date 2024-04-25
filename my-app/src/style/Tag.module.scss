@@ -7,10 +7,20 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF6060;
-    color: white;
+    background-color: $colortheme;
+    color: $bodyBC;
     font-weight: 700;
     font-size: 14px;
-    margin: 0px 14px 0px 0px;
+    margin: 0px 14px 20px 0px;
     padding: 0px 14px 0px 14px;
+}
+
+@media (max-width: $switchMobileWidth) {
+    .contentTag {
+        min-width: 84px;
+        height: 18px;
+        padding: 0px 5px 0px 5px;
+        font-size: 10px;
+        border-radius: 5px;
+    }
 }

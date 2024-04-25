@@ -1,12 +1,19 @@
 @import "./Variables_Globales/VG.module.scss";
 
 .main {
-  max-width: 1440px;
-  padding: 50px 100px 50px 100px;
+  max-width: $maxLview;
+  padding: 43px 100px 43px 100px;
   box-sizing: border-box;
-  background-color: white;
+  background-color: $bodyBC;
 }
 
 * {
   font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: $switchMobileWidth) {
+.main {
+  padding: 9px 20px 0px 20px;
+  max-height: 1267px;
+}
 }

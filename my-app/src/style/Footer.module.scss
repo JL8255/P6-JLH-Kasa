@@ -1,20 +1,38 @@
 @import "./Variables_Globales/VG.module.scss";
 
 .footer {
-    width: 100%;
+    width: 100vw;
+    max-width: $maxLview;
     height: 209px;
-    background-color: black;
-    color: white;
+    background-color: $footerBC;
+    color: $bodyBC;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px 0px 0px;
     z-index: 100;
     box-sizing: border-box;
+    img {
+        margin-top: 30px;
+    }
     p {
         font-weight: 500;
         font-size: 24px;
         margin: 40px 0px 0px 0px;
+    }
+}
+
+@media (max-width: $switchMobileWidth) {
+    .footer {
+        img {
+            height: 40px;
+        }
+        p {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            width: 134px;
+            margin: 10px 0px 0px 0px;
+        }
     }
 }

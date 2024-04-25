@@ -3,45 +3,77 @@
 .contentLoc {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .contentCards {
-    width: 100vw;
-    height: 817px;
-    background-color: #F6F6F6;
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
+    min-height: 831px;
+    background-color: $carrouselBC;
     border-radius: 20px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content:center;
+    align-items:start;
+    position:relative;
+    padding: 25px 27.5px 25px 27.5px;
+    box-sizing: border-box;
+}
+
+.img {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.buttonP {
-    width: 80px;
-    height: 440px;
+    opacity: 0;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
     border:none;
-    position:absolute;
-    left:0px;
-    background-color: white;
-    margin: 0;
+    margin: -25px 0px -25px 0px;
+    z-index: 1;
+    position: absolute;
     &:hover {
-        background-color: red;
+        opacity: 1;
         transition: 0.5s;
+    img {
+        width: 100%;
+        filter: drop-shadow(0px 0px 15px gray);
     }
+}}
 
+.imgP {
+    @extend.img;
+    left: 0px;
+    img {
+        rotate: (270deg);
+    }
 }
 
-.buttonS {
-    width: 80px;
-    height: 440px;
-    border:none;
-    position:absolute;
-    right:0px;
-    background-color: white;
-    margin: 0;
-    &:hover {
-        background-color: red;
-        transition: 0.5s;
+.imgS {
+    @extend.img;
+    right: 0px;
+    img {
+        rotate: (90deg);
+    }
+}
+
+@media (max-width: $switchMobileWidth) {
+    .contentCards {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 440px);
+        padding:0;
+        border-radius: 10px 10px 10px 10px;
+        background-color: $bodyBC;
+        overflow-y: scroll;
+    }
+    .imgP {
+        display: none;
+    }
+    .imgS {
+        display: none;
     }
 }

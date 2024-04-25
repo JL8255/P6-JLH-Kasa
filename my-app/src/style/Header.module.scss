@@ -1,7 +1,8 @@
 @import "./Variables_Globales/VG.module.scss";
 
 .header {
-    width: 1240px;
+    width: calc(100vw - 200px);
+    max-width: calc($maxLview - 200px);
     height: 68px;
     display: flex;
     flex-direction: row;
@@ -17,11 +18,29 @@
             font-size: 24px;
         }
 }
-
+.linkActif {
+    text-decoration: underline;
+    color: $fontColorDefault;
+}
+.linkInactif {
+    text-decoration: none;
+    color: $fontColorDefault;
+}
 .link {
     text-decoration: none;
-    color: black;
-    &:hover {
-        text-decoration: underline;
+    color: $fontColorDefault;
+}
+
+@media (max-width: $switchMobileWidth) {
+    .header {
+        width: calc(100vw - 40px);
+        margin: 0px 0px 20px 0px;
+        img {
+            height: 47px;
+        }
+        nav {
+            width: 150px;
+            font-size: 12px; 
+        }
     }
 }

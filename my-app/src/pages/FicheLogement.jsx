@@ -4,57 +4,61 @@ import styles from '../style/FicheLogement.module.scss'
 import Tag from "../components/Tag"
 import Notation from "../components/Notation"
 import Collapse from "../components/Collapse"
+import Carrousel from "../components/Carrousel"
+import Header from '../components/Header'
 
 function FicheLogement() {
 
     let { id } = useParams()
     id = id.substring(1)
-    const [ location ] = locationsList.filter(function (loc) {
+    const [ loc ] = locationsList.filter(function (loc) {
         return loc.id === id;
     });
 
-    if (location == undefined) {document.location.replace('/Error_id_not_found!')
+    if (loc == undefined) {document.location.replace('/Error_id_not_found!')
     } else {
 
-    const whereSpace = location.host.name.search(" ")
-    const prenom = location.host.name.substring(0,whereSpace)
-    const nom = location.host.name.substring(whereSpace)
+    const whereSpace = loc.host.name.search(" ")
+    const prenom = loc.host.name.substring(0,whereSpace)
+    const nom = loc.host.name.substring(whereSpace)
 
-    const tags = location.tags
+    const tags = loc.tags
 
     return (
         <div>
-            <img className={styles.img} src={location.cover} alt="photo de la location"/>
+            <Header AActif={false} BActif={false}/>
+            <Carrousel pictures={loc.pictures}/>
             
             <div className={styles.capsuleTitre}>
                 <div className={styles.contentTitle}>
-                    <h2 className={styles.title}>{location.title}</h2>
-                    <p className={styles.location}>{location.location}</p>
+                    <h2 className={styles.title}>{loc.title}</h2>
+                    <p className={styles.location}>{loc.location}</p>
+                    <div className={styles.capsuleTag}>
+                        <div className={styles.tag}>
+                            {tags.map((tag, index) => <Tag key={index} tag={tag}/>)}
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.contentHost}>
-                    <div className={styles.contentNom}>
-                        <h3>{prenom}</h3>
-                        <h3>{nom}</h3>
+                    <div className={styles.contentAvatar}>
+                        <div className={styles.contentNom}>
+                            <h3>{prenom}</h3>
+                            <h3>{nom}</h3>
+                        </div>
+                        <img src={loc.host.picture} alt="avatar du propriétaire"/>
                     </div>
-                    <img src={location.host.picture} alt="avatar du propriétaire"/>
+                    <div className={styles.contentNotation}>
+                        <Notation rat={loc.rating}/>
+                    </div>
                 </div> 
-            </div>
-
-            <div className={styles.capsuleTag}>
-                <div className={styles.tag}>
-                    {tags.map((tag, index) => <Tag key={index} tag={tag}/>)}
-                </div>
-                <div>
-                    <Notation rat={location.rating}/>
-                </div>
             </div>
 
             <div className={styles.contentCol}>
                 <div className={styles.collapse}>
-                    <Collapse name="Description" content={[location.description]}/>
+                    <Collapse name="Description" content={[loc.description]}/>
                 </div>
                 <div className={styles.collapse}>
-                    <Collapse name="Equipement" content={location.equipments}/>
+                    <Collapse name="Equipement" content={loc.equipments}/>
                 </div>
             </div>
         </div>
