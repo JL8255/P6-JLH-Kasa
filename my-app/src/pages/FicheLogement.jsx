@@ -10,7 +10,6 @@ import Header from '../components/Header'
 function FicheLogement() {
 
     let { id } = useParams()
-    id = id.substring(1)
     const [ loc ] = locationsList.filter(function (loc) {
         return loc.id === id;
     });

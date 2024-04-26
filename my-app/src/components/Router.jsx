@@ -9,6 +9,7 @@ import Footer from './Footer'
 function Router() {
     return (
       <BrowserRouter>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/APropos" element={<APropos />} />

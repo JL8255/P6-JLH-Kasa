@@ -3,31 +3,28 @@
         "id":"t1",
         "theme":"Fiabilité",
         "contenu": [
-            "Vérification de la conformité des offres par nos experts.",
-            "Avis des clients vérifiés."
+            "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
         ]
     },
     {
         "id":"t2",
         "theme":"Respect",
         "contenu": [
-            "formation de nos partenaires aux règles de déontologie de Kasa",
-            "Numéro pour nous signaler un comportements abusif de nos partenaires :"
+            "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme."
         ]
     },
     {
         "id":"t3",
         "theme":"Service",
         "contenu": [
-            "Numéro d'assistance gratuit 24h/24h et 7j/7j :"
+            "<Texte sur les services de Kasa>"
         ]
     },
     {
         "id":"t4",
         "theme":"Sécurité",
         "contenu": [
-            "Vérifications d'application des normes",
-            "Paiement sécurisé via notre plateforme"
+            "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs. Chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         ]
     }
 ]
