@@ -20,8 +20,7 @@
     .passive_img {
         transform: rotate(0deg);
         width: 25px;
-        transition : $transitionTime;
-        }
+    }
     .active_img {
         transform: rotate(-180deg);
         width: 25px;
