@@ -10,7 +10,7 @@ Card.defaultProps = {
 
 function Card({location, index, count}) {
     return (
-        <Link to={"/FicheLogement/:"+location.id} className={styles.link}>
+        <Link to={"/FicheLogement/"+location.id} className={styles.link}>
             <div></div>
             {(location.cover===null) ? <img src={LOGO}/> : <img src={location.cover}/>}
             <p>{index+1+count+" - "+location.title}</p>
