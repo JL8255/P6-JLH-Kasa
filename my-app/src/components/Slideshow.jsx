@@ -14,7 +14,7 @@ function Slideshow() {
 	return (
         <div className={styles.contentLoc}>
             <div className={styles.contentCards}>
-                <div className={styles.imgP} onClick={() => setCount(count > 0 ? count - 6 : count=maxLength-(maxLength % 6))}>
+                <div className={styles.imgP} onClick={() => setCount(count > 0 ? count - B : count=maxLength-(maxLength % B))}>
                     <img src={Vector} alt="précédent"/>
                 </div>
                 {locationsList.slice(A+count, B+count).map((location, index) => (
@@ -22,7 +22,7 @@ function Slideshow() {
                         <Card location={location} id={location.id} cover={location.cover} index={index} count={count} title={location.title}/>
                     </div>
                 ))}
-                <div className={styles.imgS} onClick={() => setCount(count < (maxLength-6) ? count +6 : count=0)}>
+                <div className={styles.imgS} onClick={() => setCount(count < (maxLength-B) ? count +B : count=0)}>
                     <img src={Vector} alt="suivant"/>
                 </div>
             </div>

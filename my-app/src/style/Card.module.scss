@@ -41,11 +41,14 @@
 @media (max-width: $switchMobileWidth) {
     .link {
         margin: 0px 0px 22px 0px;
+        width: 335px;
         height: 255px;
         div {
+            width: 335px;
             height: 255px;
         }
         img {
+            width: 335px;
             height: 255px;
         }
     }
