@@ -7,7 +7,6 @@ import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
 
 function FicheLogement() {
-
     let { id } = useParams()
     const [ loc ] = locationsList.filter(function (loc) {
         return loc.id === id;
