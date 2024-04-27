@@ -9,14 +9,13 @@ import Footer from './Footer'
 function Router() {
     return (
       <BrowserRouter>
-      
+      <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/APropos" element={<APropos />} />
           <Route path="/FicheLogement/:id" element={<FicheLogement />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        
       </BrowserRouter>
     );
   }
