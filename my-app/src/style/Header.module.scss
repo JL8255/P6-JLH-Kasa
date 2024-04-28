@@ -19,6 +19,15 @@
         }
 }
 
+.linkActif {
+    text-decoration: underline;
+    color: $fontColorDefault;
+}
+.linkInactif {
+    text-decoration: none;
+    color: $fontColorDefault;
+}
+
 @media (max-width: $switchMobileWidth) {
     .header {
         width: calc(100vw - 40px);

@@ -5,8 +5,11 @@ import Tag from "../components/Tag"
 import Notation from "../components/Notation"
 import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
+import React, {useEffect} from 'react';
 
-function FicheLogement() {
+function FicheLogement({liens, setliens}) {
+    useEffect(() => {setliens(liens=[false,false])},[])
+
     let { id } = useParams()
     const [ loc ] = locationsList.filter(function (loc) {
         return loc.id === id;

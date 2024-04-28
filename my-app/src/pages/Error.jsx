@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import styles from "../style/Error.module.scss"
+import React, {useEffect} from 'react';
 
-function Error() {
+function Error({liens, setliens}) {
+    useEffect(() => {setliens(liens=[false,false])},[])
+
     return (
         <div className={styles.content}>
             <p className={styles.num}>404</p>
