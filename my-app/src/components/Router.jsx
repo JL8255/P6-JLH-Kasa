@@ -4,21 +4,22 @@ import APropos from '../pages/APropos'
 import FicheLogement from '../pages/FicheLogement'
 import Error from '../pages/Error'
 import Header from './Header'
-import Footer from './Footer'
+import React, { useState } from 'react';
+
 
 function Router() {
-    return (
-      <BrowserRouter>
-      
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/APropos" element={<APropos />} />
-          <Route path="/FicheLogement/:id" element={<FicheLogement />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-        
-      </BrowserRouter>
-    );
-  }
+  const [liens, setliens] = useState([false,false])
+  return (
+    <BrowserRouter>
+    <Header liens={liens}/>
+      <Routes>
+        <Route path="/" element={<Home liens={liens} setliens={setliens}/>}/>
+        <Route path="/APropos" element={<APropos liens={liens} setliens={setliens}/>}/>
+        <Route path="/FicheLogement/:id" element={<FicheLogement liens={liens} setliens={setliens}/>}/>
+        <Route path="*" element={<Error liens={liens} setliens={setliens}/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
+}
   
-  export default Router;
+export default Router;

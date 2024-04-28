@@ -18,15 +18,12 @@
             font-size: 24px;
         }
 }
+
 .linkActif {
     text-decoration: underline;
     color: $fontColorDefault;
 }
 .linkInactif {
-    text-decoration: none;
-    color: $fontColorDefault;
-}
-.link {
     text-decoration: none;
     color: $fontColorDefault;
 }

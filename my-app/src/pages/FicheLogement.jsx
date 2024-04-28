@@ -5,9 +5,10 @@ import Tag from "../components/Tag"
 import Notation from "../components/Notation"
 import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
-import Header from '../components/Header'
+import React, {useEffect} from 'react';
 
-function FicheLogement() {
+function FicheLogement({liens, setliens}) {
+    useEffect(() => {setliens(liens=[false,false])},[])
 
     let { id } = useParams()
     const [ loc ] = locationsList.filter(function (loc) {
@@ -25,7 +26,6 @@ function FicheLogement() {
 
     return (
         <div>
-            <Header AActif={false} BActif={false}/>
             <Carrousel pictures={loc.pictures}/>
             
             <div className={styles.capsuleTitre}>

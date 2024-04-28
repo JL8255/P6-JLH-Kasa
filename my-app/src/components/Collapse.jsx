@@ -3,7 +3,7 @@ import Vector from '../assets/Vector.svg'
 import React, { useState } from 'react';
 
 function Collapse({name, content}) {
-    const [active, setActive] = useState(false)
+    let [active, setActive] = useState(false)
     const handleToggle = e => {setActive(!active)}
     return(
         <div className={styles.col}>

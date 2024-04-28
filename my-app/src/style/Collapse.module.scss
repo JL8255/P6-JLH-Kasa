@@ -11,15 +11,17 @@
     background-color: $colortheme;
     margin: 0px 0px 0px 0px;
     padding: 10px 20px 10px 15px;
+    z-index:0;
+    position:relative;
     p {
         color: $bodyBC;
         font-weight: 700;
         font-size: 24px;
-        margin:0;
     }
     .passive_img {
         transform: rotate(0deg);
         width: 25px;
+        transition : $transitionTime;
     }
     .active_img {
         transform: rotate(-180deg);
@@ -29,25 +31,39 @@
 }
 
 .passive_contentCollapse {
-    height: 0;
+    z-index:1;
     background-color: $carrouselBC;
-    padding: 0px;
+    box-sizing: border-box;
+    color: $bodyBC;
     font-weight: 400;
-    font-size: 0px;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    height: 0;
+    padding: 0px;
+    font-size: 18px;
     line-height: 0px;
-    margin:0;
     transition: $transitionTime;
+    p {
+        margin: 0;
+    }
 }
 
 .active_contentCollapse {
-    height: 100%;
+    z-index:1;
     background-color: $carrouselBC;
-    padding: 20px;
+    box-sizing: border-box;
+    color: $fontColorDefault;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-weight: 400;
+    height: 100%;
+    padding: 20px;
     font-size: 18px;
     line-height: 25.67px;
-    margin:0;
     transition: $transitionTime;
+    p {
+        margin: 0;
+    }
 }
 
 @media (max-width: $switchMobileWidth) {
