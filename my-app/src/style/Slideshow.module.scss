@@ -45,22 +45,6 @@
     }
 }}
 
-.imgP {
-    @extend.img;
-    left: 0px;
-    img {
-        rotate: (270deg);
-    }
-}
-
-.imgS {
-    @extend.img;
-    right: 0px;
-    img {
-        rotate: (90deg);
-    }
-}
-
 @media (max-width: $switchMobileWidth) {
     .contentCards {
         flex-direction: column;
@@ -73,11 +57,5 @@
         border-radius: 10px 10px 10px 10px;
         background-color: $bodyBC;
         overflow-y: scroll;
-    }
-    .imgP {
-        display: none;
-    }
-    .imgS {
-        display: none;
     }
 }
